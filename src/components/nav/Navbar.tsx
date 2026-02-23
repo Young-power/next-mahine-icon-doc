@@ -8,10 +8,12 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import ThemeToggle from '../darkMode/ThemeToggle';
 import { useEffect, useState } from 'react';
+import { span } from 'framer-motion/client';
 
 const Navbar = () => {
   const pathName = usePathname();
    const [version, setVersion] = useState<string>("");
+   const [vMounted, setVMounted] = useState<boolean>(false);
      
 
 
@@ -22,6 +24,7 @@ const Navbar = () => {
             const res = await fetch("/api/version");
             const data = await res.json();
             setVersion(data.version)
+            setVMounted(true)
 
         } catch (error) {
 
@@ -65,7 +68,11 @@ const Navbar = () => {
           {/* Package version */}
           <Link href={"https://www.npmjs.com/package/next-mahine-icon"} className='flex justify-center items-center space-x-1'>
             <Package className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-400 duration-300 ease-in-out" />
-            <span className='text-black dark:text-white'>{version}</span>
+            <span className='text-black dark:text-white'>
+              { vMounted ? version : <span className='text-black font-extrabolt dark:text-white'>...</span>
+
+              }
+            </span>
           </Link>
         </div>
 
