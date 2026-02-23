@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "next-mahine-icon",
   description: "A collection of responsive icons for Next.js, easy to use in your frontend projects with lightweight and customizable React components.",
-  icons: {
-    icon: "/assets/logo2.png",
-  },
+  icons: [
+    { url: "/assets/logo2.png", sizes: "32x32", type: "image/png" },
+    { url: "/assets/logo2.png", sizes: "512x512", type: "image/png" },
+  ],
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
