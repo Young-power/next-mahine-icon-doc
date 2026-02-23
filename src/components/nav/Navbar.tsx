@@ -58,12 +58,12 @@ const Navbar = () => {
 
         {/* Github */}
         <div className='flex justify-center items-center  space-x-2'>
-          <Link href={"https://github.com/Young-power/next-mahine-icon"} className='flex justify-center items-center hover:text-blue-500 transition-colors duration-300'>
+          <Link href={"https://github.com/Young-power/next-mahine-icon"}  className='flex justify-center items-center hover:text-blue-500 transition-colors duration-300'>
             <Github className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-400 duration-300 ease-in-out" />
           </Link>
 
           {/* Package version */}
-          <Link href={""} className='flex justify-center items-center space-x-1'>
+          <Link href={"https://www.npmjs.com/package/next-mahine-icon"} className='flex justify-center items-center space-x-1'>
             <Package className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-400 duration-300 ease-in-out" />
             <span className='text-black dark:text-white'>{version}</span>
           </Link>

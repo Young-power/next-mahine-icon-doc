@@ -55,6 +55,7 @@ export const IconGallery = () => {
 
 
             {/* Grid des icônes */}
+          
             <div className="w-full h-89 lg:h-150 overflow-auto grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 lg:ml-24 gap-4">
                 {filteredIcons.length > 0 ? filteredIcons.map((icon, index) => (
                     <div key={index}>

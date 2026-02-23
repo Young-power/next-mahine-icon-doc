@@ -11,12 +11,12 @@ export type FooterLink = {
 export const communityLinks: FooterLink[] = [
   {
     label: "GitHub",
-    href: "#",
+    href: "https://github.com/Young-power/next-mahine-icon",
     icon: Github,
   },
   {
     label: "NPM",
-    href: "#",
+    href: "https://www.npmjs.com/package/next-mahine-icon",
     icon: Package,
   },
   {
