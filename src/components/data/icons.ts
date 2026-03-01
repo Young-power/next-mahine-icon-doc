@@ -1686,7 +1686,39 @@ import {
   Angular,
   Php,
   Laravel,
-  Fastapi
+  Fastapi,
+  AbrahamLincoln,
+  AdobePhotoshop,
+  AmazonColor,
+  AndroidColor,
+  CancelColor,
+  DiscordColor,
+  EmailColor,
+  FigmaColor,
+  FolderColor,
+  GoatColor,
+  GithubColor,
+  GoogleColor,
+  GooglePlayStore,
+  GoogleSheets,
+  InstagramColor,
+  InstagramVerificationBadge,
+  JavaColor,
+  JavascriptColor,
+  LinkedinColor,
+  LionColor,
+  LocationsColor,
+  MacFolderColor,
+  MoonBlack,
+  PythonColor,
+  ShinyStarColor,
+  StarColor,
+  TelegramColor,
+  TiktokColor,
+  WhatsappColor,
+  XColor,
+  YoutubeColor
+
 } from "next-mahine-icon";
 
 // 👉 Type propre
@@ -3512,5 +3544,41 @@ export const icons: IconItem[] = [
 
   // Media / control
   { name: "SquareStop", category: "media", component: SquareStop },
+
+
+
+  //colors icon 
+
+  { name: "AbrahamLincoln", category: "users", component: AbrahamLincoln },
+  { name: "AdobePhotoshop", category: "brands", component: AdobePhotoshop },
+  { name: "AmazonColor", category: "ecommerce", component: AmazonColor },
+  { name: "AndroidColor", category: "devices", component: AndroidColor },
+  { name: "CancelColor", category: "actions", component: CancelColor },
+  { name: "DiscordColor", category: "media", component: DiscordColor },
+  { name: "EmailColor", category: "communication", component: EmailColor },
+  { name: "FigmaColor", category: "brands", component: FigmaColor },
+  { name: "FolderColor", category: "files", component: FolderColor },
+  { name: "GoatColor", category: "users", component: GoatColor },
+  { name: "GithubColor", category: "brands", component: GithubColor },
+  { name: "GoogleColor", category: "network", component: GoogleColor },
+  { name: "GooglePlayStore", category: "devices", component: GooglePlayStore },
+  { name: "GoogleSheets", category: "files", component: GoogleSheets },
+  { name: "InstagramColor", category: "media", component: InstagramColor },
+  { name: "InstagramVerificationBadge", category: "misc", component: InstagramVerificationBadge },
+  { name: "JavaColor", category: "brands", component: JavaColor },
+  { name: "JavascriptColor", category: "brands", component: JavascriptColor },
+  { name: "LinkedinColor", category: "network", component: LinkedinColor },
+  { name: "LionColor", category: "users", component: LionColor },
+  { name: "LocationsColor", category: "misc", component: LocationsColor },
+  { name: "MacFolderColor", category: "files", component: MacFolderColor },
+  { name: "MoonBlack", category: "weather", component: MoonBlack },
+  { name: "PythonColor", category: "brands", component: PythonColor },
+  { name: "ShinyStarColor", category: "shapes", component: ShinyStarColor },
+  { name: "StarColor", category: "shapes", component: StarColor },
+  { name: "TelegramColor", category: "network", component: TelegramColor },
+  { name: "TiktokColor", category: "media", component: TiktokColor },
+  { name: "WhatsappColor", category: "network", component: WhatsappColor },
+  { name: "XColor", category: "media", component: XColor },
+  { name: "YoutubeColor", category: "media", component: YoutubeColor },
 
 ];

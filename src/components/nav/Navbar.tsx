@@ -8,7 +8,6 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import ThemeToggle from '../darkMode/ThemeToggle';
 import { useEffect, useState } from 'react';
-import { span } from 'framer-motion/client';
 
 const Navbar = () => {
   const pathName = usePathname();
