@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useDeferredValue, useMemo, useRef } from "react";
 import { icons, categories, IconItem, CategoryType } from "./icons";
 import SIdeBar from "../sideBar/SIdeBar";
 import Category from "./Category";
@@ -13,27 +13,31 @@ export const IconGallery = () => {
     const [selectedIcon, setSelectedIcon] = useState<IconItem | null>(null);
     const [filter, setFilter] = useState<CategoryType>("all");
 
+ 
+    const [searchValue, setSearchValue] = useState<string>('');
+
+    //permet de servir en première position la valeur du champ input
+    const deferredSearch = useDeferredValue(searchValue)
 
 
 
-    const [searchValue, setSearchValue] = useState<string>('')
-
-    const search = (e: React.ChangeEvent<HTMLInputElement, HTMLInputElement>) => {
+    const search = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchValue(e.target.value)
 
     }
 
 
-
-
-    const filteredIcons = icons
-        .filter((icon) =>
-            filter === "all" ? true : icon.category === filter
-        )
-        .filter((icon) =>
-            icon.name.toLowerCase().includes(searchValue.toLowerCase()) ||
-            icon.category.toLowerCase().includes(searchValue.toLowerCase())
-        );
+    const filteredIcons = useMemo(() => {
+        return icons
+            .filter((icon) =>
+                filter === "all" ? true : icon.category === filter
+            )
+            .filter((icon) =>
+                icon.name.toLowerCase().includes(deferredSearch.toLowerCase()) ||
+                icon.category.toLowerCase().includes(deferredSearch.toLowerCase())
+            );
+    }, [filter, deferredSearch])
+   
     return (
         <div className="py-3">
             <div
@@ -47,6 +51,7 @@ export const IconGallery = () => {
                 <button className="absolute right-1 top-1/2 -translate-y-1/2 rounded-full bg-gray-900 dark:bg-gray-100 p-2 text-white dark:text-black transition hover:bg-gray-800 dark:hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
                     <Search />
                 </button>
+
             </div>
             {/* Filtre catégories mobile only*/}
             <div className="w-full grid grid-cols-3 gap-1 lg:hidden px-3 pb-7">
@@ -55,7 +60,7 @@ export const IconGallery = () => {
 
 
             {/* Grid des icônes */}
-          
+
             <div className="w-full h-89 lg:h-150 overflow-auto grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 lg:ml-24 gap-4">
                 {filteredIcons.length > 0 ? filteredIcons.map((icon, index) => (
                     <div key={index}>

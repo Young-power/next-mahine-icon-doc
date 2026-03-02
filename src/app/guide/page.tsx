@@ -1,7 +1,7 @@
 "use client";
 
 import ButtonTop from "@/components/goTop/ButtonTop";
-import { CodeIcon, Eye, List, MahineIcon, NextjsIcon, Package, ReactIcon, User, Whatsapp } from "next-mahine-icon";
+import { CodeIcon, DiscordColor, Eye, List, MahineIcon, NextjsIcon, Package, ReactIcon, User, Whatsapp, WhatsappColor } from "next-mahine-icon";
 import Link from "next/link";
 
 type DataLibType = {
@@ -141,18 +141,18 @@ const Guide = () => {
               href="https://discord.gg/daT2d2D54"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 bg-blue-400 dark:bg-blue-600 w-52 px-5 py-1 rounded-lg text-zinc-50 hover:bg-blue-500 dark:hover:bg-blue-700 transition-colors duration-300"
+              className="flex items-center gap-2 text-nowrap bg-blue-400 dark:bg-blue-600 w-52 px-5 py-1 rounded-lg text-zinc-50 hover:bg-blue-500 dark:hover:bg-blue-700 transition-colors duration-300"
             >
-              <User className="w-5 h-5" /> Join our Discord
+              <DiscordColor width={45} height={45}/> Join our Discord
             </Link>
 
             <Link
               href="https://discord.gg/daT2d2D54"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 bg-blue-400 dark:bg-blue-600 w-52 px-5 py-1 rounded-lg text-zinc-50 hover:bg-blue-500 dark:hover:bg-blue-700 transition-colors duration-300"
+              className="flex items-center gap-2 text-nowrap bg-blue-400 dark:bg-blue-600 w-52 px-5 py-1 rounded-lg text-zinc-50 hover:bg-blue-500 dark:hover:bg-blue-700 transition-colors duration-300"
             >
-              <Whatsapp className="w-5 h-5 text-green-400" /> Join our Whatsapp
+              <WhatsappColor width={45} height={45} /> Join our Whatsapp
             </Link>
           </div>
         </section>
