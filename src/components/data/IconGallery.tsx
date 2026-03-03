@@ -53,6 +53,7 @@ export const IconGallery = () => {
                 </button>
 
             </div>
+           
             {/* Filtre catégories mobile only*/}
             <div className="w-full grid grid-cols-3 gap-1 lg:hidden px-3 pb-7">
                 <Category filt={filter} data={categories} func={setFilter} />

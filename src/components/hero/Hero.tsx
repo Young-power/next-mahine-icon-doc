@@ -1,4 +1,5 @@
-import {  Zap } from 'next-mahine-icon'
+import { Zap } from 'next-mahine-icon'
+import { icons } from '../data/icons'
 const Hero = () => {
 
 
@@ -44,9 +45,12 @@ const Hero = () => {
             <span className="text-red-500 ">import</span>{" "}
             {"{ IconName }"} <span className='text-red-500'>from</span>  <span className='text-blue-400'>&quot;next-mahine-icon&quot;</span>;
           </p>
-          
-         
+
+
         </div>
+        <p className='text-xl pb-3'>
+                  Icons available : <span>{icons.length}</span>
+        </p>
       </div>
     </div>
   )
