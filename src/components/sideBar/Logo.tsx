@@ -4,14 +4,17 @@ const Logo = () => {
     return (
         <div className='w-full h-28 my-7 flex flex-col items-center'>
             {/* Logo animé */}
-            <div>
+            <div >
                 <Image 
+                onClick={()=>window.location.href="/"}
                     src="/assets/logo1.png" 
                     width={90} 
                     height={90} 
                     alt="logo-next-mahine-icon"
-                    className="object-contain animate-spin animation-duration-[9s] dark:bg-white dark:rounded-full"
+                    className="object-contain  animate-spin cursor-pointer animation-duration-[9s] dark:bg-white dark:rounded-full"
                     priority
+
+                    
                 />
             </div>
 

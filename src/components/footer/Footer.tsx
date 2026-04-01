@@ -88,10 +88,10 @@ const Footer = () => {
       <div className="mt-10 text-center text-xs lg:text-[15px] text-gray-400 dark:text-zinc-500">
         © {new Date().getFullYear()} Next Mahine Icon. All rights reserved.
         <div className="mt-4 flex w-full justify-center">
-          <button className="flex items-center gap-2 bg-black dark:bg-zinc-700 text-white dark:text-white px-3 py-2 cursor-pointer rounded hover:bg-gray-900 dark:hover:bg-zinc-800 transition-colors duration-300">
+          <Link href={"https://vercel.com/mahine-kamagates-projects/next-mahine-icon-doc"}  className="flex items-center gap-2 bg-black dark:bg-zinc-700 text-white dark:text-white px-3 py-2 cursor-pointer rounded hover:bg-gray-900 dark:hover:bg-zinc-800 transition-colors duration-300">
             <VercelTriangle width={25} hanging={25} />
             <span className='text-lg'>Powered by Vercel</span>
-          </button>
+          </Link>
         </div>
       </div>
     </footer>

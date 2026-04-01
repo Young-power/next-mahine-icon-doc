@@ -41,8 +41,9 @@ const Navbar = () => {
 
       {/* Logo */}
       {pathName !== "/" && (
-        <div className='hidden lg:inline-block mr-56 dark:bg-white dark:rounded-full'>
-          <Image src={"/assets/logo2.png"} width={60} height={60} alt='logo' />
+        <div className='hidden lg:inline-block mr-56  dark:bg-white dark:rounded-full'>
+
+          <Image src={"/assets/logo2.png"} width={60} height={60} alt='logo' className='cursor-pointer ' />
         </div>
       )}
 
