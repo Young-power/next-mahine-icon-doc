@@ -51,7 +51,7 @@ const InstallOption = () => {
 
         <button
           onClick={copyFunc}
-          className="absolute top-3 right-0 text-xs px-1 py-1 rounded-md
+          className="absolute top-3 right-0 text-xs px-1 py-1 rounded-md 
                      bg-zinc-800 dark:bg-zinc-700 hover:bg-zinc-700 dark:hover:bg-zinc-600 text-zinc-300 dark:text-zinc-200 transition-colors duration-300"
         >
           {saved

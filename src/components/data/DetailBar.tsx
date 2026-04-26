@@ -3,11 +3,40 @@
 import { Copy, X } from "next-mahine-icon";
 import { IconItem } from "./icons";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
+
 
 type dataType = {
   select: IconItem;
   setSelect: (icon: IconItem | null) => void;
 };
+
+const copyImport = (name: string) => {
+  navigator.clipboard.writeText(
+    `import { ${name} } from 'next-mahine-icon'`
+  )
+  toast.success("Copied successfully", {
+    position: "top-center",
+    autoClose: 3000,
+  });
+}
+
+const copyText = (name: string) => {
+
+  navigator.clipboard.writeText(
+    `<${name} />`
+  );
+  toast.success(
+    <span>
+      Copied{" "}
+      <span className="font-bold text-red-400">{name}</span>{" "}
+      successfully
+    </span>, {
+    position: "top-center",
+    autoClose: 3000,
+  });
+}
+
 
 const DetailBar = ({ select, setSelect }: dataType) => {
   return (
@@ -25,12 +54,13 @@ const DetailBar = ({ select, setSelect }: dataType) => {
         className="fixed right-0 top-0 h-screen w-80 bg-white dark:bg-zinc-900 z-50 shadow-2xl border-l border-gray-200 dark:border-zinc-800"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="p-6 flex flex-col h-full">
+        <div className="p-6 flex flex-col h-full dark:border dark:rounded-2xl dark:border-white">
           {/* ❌ Close button top */}
           <div className="flex justify-end">
             <button
               onClick={() => setSelect(null)}
-              className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-zinc-800 transition"
+              className="p-2 rounded-md hover:bg-red-400
+              transition-colors duration-300 cursor-pointer hover:text-white  "
             >
               <X className="w-5 h-5" />
             </button>
@@ -63,12 +93,8 @@ const DetailBar = ({ select, setSelect }: dataType) => {
               className="w-full px-4 py-2 rounded-lg 
               bg-blue-600 dark:bg-blue-500 text-white 
               hover:bg-blue-700 dark:hover:bg-blue-600 
-              transition shadow-sm hover:shadow-md"
-              onClick={() =>
-                navigator.clipboard.writeText(
-                  `import { ${select.name} } from 'next-mahine-icon'`
-                )
-              }
+              transition shadow-sm hover:shadow-md cursor-pointer"
+              onClick={() => copyImport(select.name)}
             >
               Copy import
             </button>
@@ -80,12 +106,8 @@ const DetailBar = ({ select, setSelect }: dataType) => {
               </span>
 
               <button
-                className="p-1 rounded-md hover:bg-gray-200 dark:hover:bg-zinc-700 transition"
-                onClick={() =>
-                  navigator.clipboard.writeText(
-                    `<${select.name} />`
-                  )
-                }
+                className="p-1 cursor-pointer rounded-md hover:bg-gray-200 dark:hover:bg-zinc-700 transition"
+                onClick={() => copyText(select.name)}
               >
                 <Copy className="w-4 h-4" />
               </button>

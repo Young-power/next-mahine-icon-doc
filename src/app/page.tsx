@@ -1,14 +1,18 @@
 import { IconGallery } from "@/components/data/IconGallery";
 import ButtonTop from "@/components/goTop/ButtonTop";
 import Hero from "@/components/hero/Hero";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   return (
     <main className="relative flex flex-col min-h-screen 
                      bg-zinc-50 dark:bg-zinc-900 
-                     font-sans text-zinc-900 dark:text-zinc-100">
+                     font-sans text-zinc-900 dark:text-zinc-100"
+    >
+      <ToastContainer />
       <ButtonTop />
-      
+
       {/* Hero avec couleurs harmonisées au dark mode */}
       <div className="bg-zinc-50 dark:bg-zinc-900">
         <Hero />
